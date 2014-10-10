@@ -4,7 +4,7 @@ feature "User signs up" do
 
 	scenario "with all details" do
 		expect{sign_up("Anna", "annaj", "jerofejeva.anna@yahoo.com", "blah")}.to change(User, :count).by(1)
-		expect(page).to have_content("Hello")
+		expect(page).to have_content("Welcome Anna")
 	end
 
 	scenario "with an email that is already registered" do
