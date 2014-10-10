@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "User signs in" do
+feature "User signs out" do
 
 	before (:each) do 
 		User.create(:name => "Anna",
@@ -9,20 +9,13 @@ feature "User signs in" do
 		                :password => "blah")		
 	end
 
-	scenario "with correct credentials" do
+	scenario "while being signed in" do
 		visit '/'
-		expect(page).not_to have_content("You are signed in as annaj")
 		sign_in("jerofejeva.anna@yahoo.com", "blah")
 		expect(page).to have_content("You are signed in as annaj")
-	end
-
-	scenario "with incorrect credentials" do
-		visit '/'
+		click_on "Sign Out"
 		expect(page).not_to have_content("You are signed in as annaj")
-		sign_in("jerofejeva.anna@yahoo.com", "boom")
-		expect(page).to have_content("The email or password is incorrect")
 	end
-
 
 	def sign_in(email, password)
 		visit '/sessions/new'
@@ -30,5 +23,4 @@ feature "User signs in" do
 		fill_in :password, :with => password
 		click_on "Sign In"
 	end
-
 end

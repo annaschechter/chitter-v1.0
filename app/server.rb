@@ -45,6 +45,10 @@ post '/sessions' do
         redirect to('/')
     else
     	flash[:errors] = ["The email or password is incorrect"]
-    	erb :sign_in_page
     end
+end
+
+delete '/sessions' do
+	session[:user_id] = nil
+	redirect '/'
 end
