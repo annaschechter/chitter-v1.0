@@ -21,7 +21,7 @@ post '/users/new' do
 		                :email => params[:email],
 		                :password => params[:password])
 	if @user.save
-		"Hello"
+		"Hello {@user.name}"
     else
 		flash[:errors] = ["This username or email is already taken"]
 	end 
