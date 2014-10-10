@@ -1,0 +1,12 @@
+<% if @user %>
+Welcome <%= @user.name %>
+<% end %>
+
+<div id="signing-up">
+<form action="/users/new" method="post">
+Full Name:<input type="text" name="name">
+User Name:<input type="text" name="user_name">
+Email:<input type="text" name="email">
+Password:<input type="password" name="password">
+<input type="submit" value="Sign Up">
+</form>
