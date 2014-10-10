@@ -12,6 +12,7 @@ enable :sessions
 set :session_secret, 'super secret'
 
 get '/' do
+	@peeps = Peep.all:order => [:time_added.asc]
 	erb :index
 end
 
@@ -52,3 +53,35 @@ delete '/sessions' do
 	session[:user_id] = nil
 	redirect '/'
 end
+
+get '/peeps/new' do
+	user = User.first(:id => session[:user_id])
+	if user
+		erb :post_peep	
+	else 
+		flash[:errors] = ["You need to sign in to post on Chitter"]
+	end
+end
+
+post '/peeps' do
+	user = User.first(:id => session[:user_id])
+		if user
+			peep = Peep.create(:message => params[:message],
+					       :time_added => Time.now,
+					       :user_id => user.id)
+			redirect '/'
+	    else
+			redirect '/peeps/new'
+		end
+end
+
+
+
+
+
+
+
+
+
+
+

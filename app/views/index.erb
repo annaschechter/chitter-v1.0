@@ -1,1 +1,11 @@
-<p>This is our homepage</p>
+<ul>
+	<%if @peeps%>
+		<% @peeps.each do |peep| %>
+		<% @user = User.first(:id => peep.user_id)%>
+		<li><%=peep.time_added.strftime("%Y-%m-%d %H:%M:%S")%>  <%=peep.message%>***by<%=@user.name%>***@<%=@user.user_name%></li>
+	<%end%>
+	<%end%>
+</ul>
+
+<a href="/peeps/new" class="button">Post a Peep</a>
+

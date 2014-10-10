@@ -6,8 +6,8 @@ class User
 
 	property :id, Serial
 	property :name, String
-	property :user_name, String
-	property :email, String
+	property :user_name, String, :unique => true
+	property :email, String, :unique => true
 	property :password_digest, Text
 
 	def password=(password)
