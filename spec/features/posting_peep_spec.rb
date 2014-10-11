@@ -16,6 +16,13 @@ feature "User posts a peep" do
 		expect(page).to have_content("Chitter")
 	end
 
+	scenario "when signed out" do
+		visit '/'
+		click_on "Post a Peep"
+		expect(page).to have_content("You need to sign in to post on Chitter")
+	end
+
+
 	def post_peep
 		visit '/peeps/new'
 		fill_in :message, :with => "Hey, I am Anna"

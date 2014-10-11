@@ -27,7 +27,7 @@ post '/users/new' do
 		                :password => params[:password])
 	if @user.save
 		session[:user_id] = @user.id
-		"Welcome #{@user.name}"	
+		redirect '/'	
     else
 		flash[:errors] = ["This username or email is already taken"]
 	end 
