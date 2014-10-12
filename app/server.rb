@@ -12,7 +12,7 @@ enable :sessions
 set :session_secret, 'super secret'
 
 get '/' do
-	@peeps = Peep.all:order => [:time_added.asc]
+	@peeps = Peep.all#:order => [:time_added.asc]
 	erb :index
 end
 
