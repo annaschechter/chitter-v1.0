@@ -1,5 +1,5 @@
 get '/users/new' do
-	erb :sign_up_page
+	erb :"users/new"
 end
 
 post '/users/new' do

@@ -1,6 +1,6 @@
 
 get '/sessions/new' do
-	erb :sign_in_page
+	erb :"sessions/new"
 end
 
 post '/sessions' do

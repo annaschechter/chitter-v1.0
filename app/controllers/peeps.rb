@@ -1,7 +1,7 @@
 get '/peeps/new' do
 	user = User.first(:id => session[:user_id])
 	if user
-		erb :post_peep	
+		erb :"peeps/new"	
 	else 
 		flash[:errors] = ["You need to sign in to post on Chitter"]
 	end
