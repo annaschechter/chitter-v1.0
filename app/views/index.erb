@@ -1,3 +1,5 @@
+<main>
+<div id="peeps"
 <ul>
 	<%if @peeps%>
 		<% @peeps.each do |peep| %>
@@ -6,6 +8,11 @@
 	<%end%>
 	<%end%>
 </ul>
+</div>
 
-<a href="/peeps/new" class="button">Post a Peep</a>
+<div id="post-a-peep">
+<a href="/peeps/new">Post a Peep</a>
+</div>
+
+</main>
 

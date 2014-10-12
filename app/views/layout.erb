@@ -2,27 +2,28 @@
 <html>
 <head>
 	<title>Chitter</title>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css"> 
+ 	<link rel="stylesheet" type="text/css" href="/css/application.css">
 </head>
 
 <body>
     <header>
-    	<h1>Chitter</h1>
+    	<div id="logo"<a href='/'>Chitter</a></div>
     	<ul>
     		<li><a href="/sessions/new" class="button">Log in</a></li>
     		<li><a href="/users/new" class="button">Join</a></li>
     	</ul>
-	</header>
-	
-	<main>
+    	<div id="signed-in">
 			<% if current_user %>
 		 	You are signed in as <%= current_user.user_name %>
 		      	<form id="sign-out" action="/sessions" method="post">
 		            <input type="hidden" name="_method" value="delete">
-		            <input type="submit" value="Sign Out">
+		            <input type="submit" class="button" value="Sign Out">
 	          	</form>
 		    <% end %>
-		<%= yield %>
-	</main>
+		</div>
+	</header>
+	<%= yield %>
 </body>
 
 

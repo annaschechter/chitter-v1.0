@@ -8,11 +8,13 @@ require_relative 'helpers/application'
 
 use Rack::Flash, :sweep =>true
 
+
 enable :sessions
 set :session_secret, 'super secret'
+set :public_folder, Proc.new{ File.join(root, '..', 'public')}
 
 get '/' do
-	@peeps = Peep.all#:order => [:time_added.asc]
+	@peeps = Peep.all:order => [:time_added.asc]
 	erb :index
 end
 
