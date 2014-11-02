@@ -128,15 +128,23 @@ body #peeps {
 	margin: 3%;
 }
 
-#time-added, #message, #author {
-	padding: 6px;
+#time-added, #message, #author{
+	padding: 4px;
 }
 
 #author {
-	text-align: right;
+	float: right;
 	font-weight: bold;
 }
-/*----------------------posting peeps-----------------------*/
+
+#reply, #see-replies {
+	color: rgb(250, 79, 78);
+	display: inline;
+	text-align: left;
+	padding: 4px;
+	font-weight: bold;
+}
+----------------------posting peeps-----------------------
 #posting-peep  {
 	display: inline-table;
 	border: solid 7px rgb(250, 79, 78);
@@ -161,7 +169,7 @@ body #peeps {
 	float: right;
 }
 
-/*----------------------signing in-----------------------*/
+----------------------signing in-----------------------
 
 #signing-in {
 	display: inline-table;

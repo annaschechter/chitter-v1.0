@@ -1,7 +1,7 @@
-class Peep
+class Reply
 
 	attr_accessor :user
-	attr_accessor :reply
+	attr_accessor :peep
 
 	include DataMapper::Resource
 
@@ -10,6 +10,5 @@ class Peep
 	property :time_added, Time
 
 	belongs_to :user
-	has n, :replies
-
+	belongs_to :peep
 end

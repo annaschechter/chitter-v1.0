@@ -2,6 +2,7 @@ require 'data_mapper'
 require './app/data_mapper_setup'
 require './app/models/peep'
 require './app/models/user'
+require './app/models/reply'
 
 
 task :auto_upgrade do 
