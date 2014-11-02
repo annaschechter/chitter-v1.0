@@ -8,12 +8,13 @@
 
 <body>
     <header>
-    	<div id="logo"<a href='/'>Chitter</a></div>
-    	<ul>
-    		<li><a href="/sessions/new" class="button">Log in</a></li>
-    		<li><a href="/users/new" class="button">Join</a></li>
-    	</ul>
-    	<div id="signed-in">
+    	<a href='/'><img id="bird" src="/images/bird.jpg"/></a>
+		<a id="logo" href='/'>Chitter</a>
+    	<a id="log-in" href="/sessions/new" class="button">Log in</a>
+    	<a href="/users/new" class="button">Join</a>
+	</header>
+	<main>
+    	<section id="signed-in">
 			<% if current_user %>
 		 	You are signed in as <%= current_user.user_name %>
 		      	<form id="sign-out" action="/sessions" method="post">
@@ -21,9 +22,9 @@
 		            <input type="submit" class="button" value="Sign Out">
 	          	</form>
 		    <% end %>
-		</div>
-	</header>
+		</section>
 	<%= yield %>
+	</main>
 </body>
 
 
