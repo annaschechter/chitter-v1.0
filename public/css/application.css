@@ -71,6 +71,7 @@ body main {
 	width: 25%;
 	height: 80%;
 	margin: 2%;
+	margin-top: 5%;
 /*	margin-top: 7%;*/
 	border-radius:17px;
 }
@@ -92,14 +93,29 @@ body main {
 	margin: 2%;
 }
 
+/*----------------------welcome message-----------------------*/
+
+#welcome {
+	display: inline-table;
+	font-family: Comic, Cursive, sans-serif;
+	font-weight: bold;
+	font-size: 180%;
+	text-align: center;
+	margin: 2%;
+	margin-top: 5%;
+}
 /*----------------------peeps-----------------------*/
 
 body #peeps {
 	display: inline-table;
+/*	float: middle;*/
 	background: rgb(250, 79, 78); 
 	width: 65vw;
 	border-radius:17px;
-	margin-top: 3%;
+/*	position: relative;*/
+	margin-left: 0%;
+	margin-right: 0%
+	margin-top: 50%;
 	margin-bottom: 3%;
 
 }
@@ -120,5 +136,31 @@ body #peeps {
 	text-align: right;
 	font-weight: bold;
 }
+/*----------------------posting peeps-----------------------*/
+#posting-peep  {
+	display: inline-table;
+	border: solid 7px rgb(250, 79, 78);
+	width: 50%;
+	height: 80%;
+	margin: 2%;
+	margin-top: 7%;
+	border-radius:17px;
+}
 
+#title-message {
+	display:block;
+	color:  rgb(232, 233, 231);
+	background-color: rgb(250, 79, 78);
+	padding: 2%;
+	font-family: Comic, Cursive, sans-serif;
+	font-weight: bold;
+}
 
+#post {
+	display: inline;
+	float: right;
+}
+
+#message-window {
+	margin: 2%;
+}

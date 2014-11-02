@@ -3,7 +3,7 @@
 		<%if @peeps%>
 			<% @peeps.each do |peep| %>
 				<% @user = User.first(:id => peep.user_id)%>
-				<li class="peep" ><p id="time-added">  <%=peep.time_added.strftime("%Y-%m-%d   %H:%M")%></p><br/> 
+				<li class="peep" ><p id="time-added">  <%=peep.time_added.strftime("%Y-%m-%d %H:%M")%></p><br/> 
 					<p id="message">  <%=peep.message%></p><br/>
 					<h5 id="author">
 						  by <%=@user.name.capitalize%>  @<%=@user.user_name%>

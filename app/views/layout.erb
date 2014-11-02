@@ -23,10 +23,15 @@
 	          		</form>
 		        </article>
 	          	<p id="name-username">
-		 			<br/>Name:  <%= current_user.user_name %><br/>
+		 			<br/>Name:  <%= current_user.user_name.capitalize %><br/>
 		 			<br/>Username:  <%= current_user.name %><br/>
 		 		</p>
 		    
+			</section>
+		<% else %>
+			<section id="welcome">
+				<h2>Welcome to Chitter,<br/> worlds best <br/>
+				gossip website!</h2>
 			</section>
 		<% end %>
 		<%= yield %>
