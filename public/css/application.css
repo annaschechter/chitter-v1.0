@@ -3,9 +3,8 @@ body {
 	background-image: url("/images/extra_clean_paper.png");
 	font-size: 120%;
 }
-
+/*----------------------header-----------------------*/
 header {
-	size: 20%;
 	background-color: rgb(250, 79, 78);
 	color: rgb(232, 233, 231);
 }
@@ -27,26 +26,6 @@ header #logo {
 	vertical-align: middle;
 }
 
-/*a.button {
-	display: inline;
-	width: 80px;
-	height: 20px;
-
-
-
-	cursor: pointer;
-	background: #69cfc9;
-	border: 2px solid;
-	text-decoration: none;
-	margin-left: 5px;
-	margin-right: 5px;
-	text-align: center;
-	vertical-align: middle;
-	color: #183745;
-	font-size: 110%;
-}
-*/
-
 a.button {
 	vertical-align: middle;
 	-moz-box-shadow: 0px 0px 14px 1px #91b8b3;
@@ -65,7 +44,7 @@ a.button {
 	margin: 1.5%;
 	text-decoration:none;
 	float: right;
-/*	text-shadow:0px 1px 11px #2b665e;*/
+
 }
 a.button:hover {
 	background-color: rgb(206, 199, 190);
@@ -75,18 +54,38 @@ a.button:active {
 	top:1px;
 }*/
 
-/*header #signed-in {
-    flex: 1;
-    -webkit-flex: 1;
-    text-align: right; 
-    font-size: 150%,
-    color: black; 
-}*/
+/*----------------------profile box-----------------------*/
 
 body main {
-	margin-left: 5%;
-	margin-right: 5%;
+/*	margin-left: 5%;
+	margin-right: 5%;*/
 }
+
+#signed-in-as {
+	display: inline-block;
+	border: solid 7px rgb(250, 79, 78);
+	width: 25%;
+	height: 80%;
+	margin: 2%;
+	margin-top: 7%;
+	border-radius:17px;
+}
+
+#user {
+	color:  rgb(232, 233, 231);
+	background-color: rgb(250, 79, 78);
+	padding: 2%;
+}
+
+#sign-out {
+	display: inline;
+	float: right;
+}
+
+#name-username {
+	margin: 2%;
+}
+
 
 /*body #post-a-peep {
 	background: #facbc3;

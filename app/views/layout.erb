@@ -14,16 +14,22 @@
     	<a href="/users/new" class="button">Join</a>
 	</header>
 	<main>
-    	<section id="signed-in">
-			<% if current_user %>
-		 	You are signed in as <%= current_user.user_name %>
-		      	<form id="sign-out" action="/sessions" method="post">
-		            <input type="hidden" name="_method" value="delete">
-		            <input type="submit" class="button" value="Sign Out">
-	          	</form>
-		    <% end %>
-		</section>
-	<%= yield %>
+    	<% if current_user %>
+    		<section id="signed-in-as">
+	    		<article id="user">Current User:
+    				<form id="sign-out" action="/sessions" method="post">
+		            	<input type="hidden" name="_method" value="delete">
+		            	<input type="submit" class="button" value="Sign Out">
+	          		</form>
+		        </article>
+	          	<p id="name-username">
+		 			<br/>NAME:  <%= current_user.user_name %><br/>
+		 			<br/>USERNAME:  <%= current_user.name %><br/>
+		 		</p>
+		    
+			</section>
+		<% end %>
+		<%= yield %>
 	</main>
 </body>
 
