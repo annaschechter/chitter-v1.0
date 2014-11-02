@@ -89,7 +89,7 @@ body main {
 	float: right;
 }
 
-#name-username {
+.field {
 	margin: 2%;
 }
 
@@ -161,6 +161,53 @@ body #peeps {
 	float: right;
 }
 
-#message-window {
+/*----------------------signing in-----------------------*/
+
+#signing-in {
+	display: inline-table;
+	border: solid 7px rgb(250, 79, 78);
+	width: 50%;
+	height: 80%;
+	margin: 2%;
+	margin-top: 7%;
+	border-radius:17px;
+}
+
+#title-sign-in {
+	display:block;
+	color:  rgb(232, 233, 231);
+	background-color: rgb(250, 79, 78);
+	padding: 2%;
+	font-family: Comic, Cursive, sans-serif;
+	font-weight: bold;
+}
+
+#sign-in {
+	float: right;
+	margin: 2%;
+}
+
+/*----------------------signing up-----------------------*/
+#signing-up {
+	display: inline-table;
+	border: solid 7px rgb(250, 79, 78);
+	width: 50%;
+	height: 80%;
+	margin: 2%;
+	margin-top: 7%;
+	border-radius:17px;
+}
+
+#title-sign-up {
+	display:block;
+	color:  rgb(232, 233, 231);
+	background-color: rgb(250, 79, 78);
+	padding: 2%;
+	font-family: Comic, Cursive, sans-serif;
+	font-weight: bold;
+}
+
+#sign-up {
+	float: right;
 	margin: 2%;
 }

@@ -22,15 +22,14 @@
 		            	<input type="submit" class="button" value="Sign Out">
 	          		</form>
 		        </article>
-	          	<p id="name-username">
-		 			<br/>Name:  <%= current_user.user_name.capitalize %><br/>
-		 			<br/>Username:  <%= current_user.name %><br/>
-		 		</p>
+	          	<p class="field">
+		 			<br/>Name:  <%= current_user.user_name.capitalize %></p>
+		 			<br/><p class="field" >Username:  <%= current_user.name %></p><br/>
 		    
 			</section>
 		<% else %>
 			<section id="welcome">
-				<h2>Welcome to Chitter,<br/> worlds best <br/>
+				<h2>Welcome to Chitter,<br/> world&prime;s best <br/>
 				gossip website!</h2>
 			</section>
 		<% end %>
