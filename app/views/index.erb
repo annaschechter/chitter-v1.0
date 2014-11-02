@@ -1,16 +1,20 @@
-<div id="peeps"
-<ul>
-	<%if @peeps%>
-		<% @peeps.each do |peep| %>
-		<% @user = User.first(:id => peep.user_id)%>
-		<li><%=peep.time_added.strftime("%Y-%m-%d %H:%M:%S")%>  <%=peep.message%>***by<%=@user.name%>***@<%=@user.user_name%></li>
-	<%end%>
-	<%end%>
-</ul>
-</div>
+<article id="peeps"
+	<ol>
+		<%if @peeps%>
+			<% @peeps.each do |peep| %>
+				<% @user = User.first(:id => peep.user_id)%>
+				<li class="peep" ><p id="time-added">  <%=peep.time_added.strftime("%Y-%m-%d   %H:%M")%></p><br/> 
+					<p id="message">  <%=peep.message%></p><br/>
+					<h5 id="author">
+						  by <%=@user.name.capitalize%>  @<%=@user.user_name%>
+					</h5>
+				</li>
+			<%end%>
+		<%end%>
+	</ol>
+	<a id="post-a-peep" class= "button" href="/peeps/new">Post a Peep</a>
+</article>
 
-<div id="post-a-peep">
-<a href="/peeps/new">Post a Peep</a>
-</div>
+
 
 
