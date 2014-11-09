@@ -1,0 +1,26 @@
+<section id="reply-section">
+	<article id="the-peep">
+	<p id="title-gossip">Gossip:</p>
+	<section id="peep"
+		<p id="time-added">  <%=@peep.time_added.strftime("%Y-%m-%d %H:%M")%></p><br/> 
+		<p id="message">  <%= @peep.message %></p><br/>
+		<a id="reply" href="/replies/new/<%= @peep.id %>" >Reply</a> 
+		<h5 id="author">by <%=@user.name.capitalize%>  @<%=@user.user_name%></h5><br/>
+		</section>
+	</article>
+
+
+	<article id="replies">
+	<p id="title-replies">Replies:</p>
+		<ol>
+			<%if @replies%>
+				<% @replies.each do |reply| %>
+					<li class="reply" ><p id="reply-time-added">  <%=reply.time_added.strftime("%Y-%m-%d %H:%M")%></p><br/> 
+						<p id="reply-message">  <%=reply.message%></p><br/>
+						<h5 id="reply-author">by <%=@user.name.capitalize%>  @<%=@user.user_name%></h5><br/>
+					</li>
+				<%end%>
+			<%end%>
+		</ol>
+	</article>
+</section>

@@ -19,12 +19,12 @@
 	    		<article id="user">Current User:
     				<form id="sign-out" action="/sessions" method="post">
 		            	<input type="hidden" name="_method" value="delete">
-		            	<input type="submit" class="button" value="Sign Out">
+		            	<input type="submit" id="sign-out-button" value="Sign Out">
 	          		</form>
 		        </article>
 	          	<p class="field">
-		 			<br/>Name:  <%= current_user.user_name.capitalize %></p>
-		 			<br/><p class="field" >Username:  <%= current_user.name %></p><br/>
+		 			<br/>Name: <%= current_user.name.capitalize %></p>
+		 			<br/><p class="field" >Username: <%= current_user.user_name %></p><br/>
 		    
 			</section>
 		<% else %>

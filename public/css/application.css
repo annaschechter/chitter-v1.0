@@ -28,7 +28,15 @@ header #logo {
 }
 
 a.button {
-	vertical-align: middle;
+	background-color: rgb(250, 79, 78);
+	color: white;
+	border: none;
+	text-decoration: underline;
+	font-size: 26px;
+	float: right;
+	margin: 1.9%;
+}
+/*	vertical-align: middle;
 	-moz-box-shadow: 0px 0px 14px 1px #91b8b3;
 	-webkit-box-shadow: 0px 0px 14px 1px #91b8b3;
 	box-shadow: 0px 0px 14px 1px #91b8b3;
@@ -54,7 +62,7 @@ a.button:hover {
 a.button:active {
 	position:relative;
 	top:1px;
-}*/
+}*/*/
 
 /*----------------------profile box-----------------------*/
 
@@ -72,7 +80,6 @@ body main {
 	height: 80%;
 	margin: 2%;
 	margin-top: 5%;
-/*	margin-top: 7%;*/
 	border-radius:17px;
 }
 
@@ -89,6 +96,14 @@ body main {
 	float: right;
 }
 
+#sign-out-button{
+	background-color: rgb(250, 79, 78);
+	color: white;
+	border: none;
+	text-decoration: underline;
+	font-size: 16px;
+}
+
 .field {
 	margin: 2%;
 }
@@ -97,9 +112,9 @@ body main {
 
 #welcome {
 	display: inline-table;
-	font-family: Comic, Cursive, sans-serif;
+	font-family: Arial, Cursive, sans-serif;
 	font-weight: bold;
-	font-size: 180%;
+	font-size: 170%;
 	text-align: center;
 	margin: 2%;
 	margin-top: 5%;
@@ -108,43 +123,40 @@ body main {
 
 body #peeps {
 	display: inline-table;
-/*	float: middle;*/
 	background: rgb(250, 79, 78); 
 	width: 65vw;
 	border-radius:17px;
-/*	position: relative;*/
-	margin-left: 0%;
-	margin-right: 0%
-	margin-top: 50%;
-	margin-bottom: 3%;
+	margin-bottom: 4%;
 
 }
 
 .peep {
 	background-image: url("/images/extra_clean_paper.png");
-/*	border: solid 3px rgb(250, 79, 78);*/
 	border-radius:17px;
-	width: 60vw;
-	margin: 3%;
+	width: 61.5vw;
+	margin: 2.5%;
 }
 
-#time-added, #message, #author{
-	padding: 4px;
+#time-added, #message, #author, #reply, #see-replies{
+	padding: 5px;
 }
 
 #author {
+	display: inline-table;
 	float: right;
 	font-weight: bold;
 }
 
 #reply, #see-replies {
-	color: rgb(250, 79, 78);
-	display: inline;
+	color: black;
+	display: inline-table;
 	text-align: left;
-	padding: 4px;
-	font-weight: bold;
 }
-----------------------posting peeps-----------------------
+
+#post-a-peep {
+	font-family: Comic, Cursive, sans-serif;
+}
+/*----------------------posting peeps-----------------------*/
 #posting-peep  {
 	display: inline-table;
 	border: solid 7px rgb(250, 79, 78);
@@ -169,7 +181,7 @@ body #peeps {
 	float: right;
 }
 
-----------------------signing in-----------------------
+/*----------------------signing in-----------------------*/
 
 #signing-in {
 	display: inline-table;
@@ -218,4 +230,97 @@ body #peeps {
 #sign-up {
 	float: right;
 	margin: 2%;
+}
+
+/*----------------------replies-----------------------*/
+
+#reply-section {
+	display: inline-table;
+}
+
+#replies {
+	display: block;
+	background: rgb(250, 79, 78); 
+	width: 65vw;
+	border-radius:17px;
+	margin-bottom: 4%;
+	padding-bottom: 1%;
+
+}
+
+.reply {
+	background-image: url("/images/extra_clean_paper.png");
+	border-radius:17px;
+	width: 61.5vw;
+	margin: 2.5%;
+	margin-bottom: 2.5%;
+	padding-bottom: 2.5%;
+}
+
+#reply-time-added, #reply-message, #reply-author{
+	padding: 5px;
+}
+
+#reply-author {
+	display: inline-table;
+	float: right;
+	font-weight: bold;
+}
+
+#title-replies, #title-gossip {
+	display: block;
+	color:  rgb(232, 233, 231);
+	background-color: rgb(250, 79, 78);
+	padding: 1%;
+	font-family: Comic, Cursive, sans-serif;
+	font-weight: bold;
+	border-radius:17px;
+
+}
+
+#the-peep {
+	display: inline-table;
+	background: rgb(250, 79, 78); 
+	width: 65vw;
+	border-radius:17px;
+	margin-bottom: 4%;
+}
+
+#peep {
+	background-image: url("/images/extra_clean_paper.png");
+	border-radius:17px;
+	width: 61.5vw;
+	paddind-top: 2.5%;
+	padding-bottom: 2.5%;
+	margin: 2.5%;
+	float: center;
+}
+
+/*----------------------posting replies-----------------------*/
+
+#posting-reply {
+	display: inline-table;
+}
+
+#posting-reply {
+	display: inline-table;
+	border: solid 7px rgb(250, 79, 78);
+	width: 50%;
+	height: 80%;
+	margin: 2%;
+	margin-top: 7%;
+	border-radius:17px;
+}
+
+#titlemessage {
+	display:block;
+	color:  rgb(232, 233, 231);
+	background-color: rgb(250, 79, 78);
+	padding: 2%;
+	font-family: Comic, Cursive, sans-serif;
+	font-weight: bold;
+}
+
+#reply-post {
+	float: right;
 }
