@@ -5,7 +5,7 @@
 		<p id="time-added">  <%=@peep.time_added.strftime("%Y-%m-%d %H:%M")%></p><br/> 
 		<p id="message">  <%= @peep.message %></p><br/>
 		<a id="reply" href="/replies/new/<%= @peep.id %>" >Reply</a> 
-		<h5 id="author">by <%=@user.name.capitalize%>  @<%=@user.user_name%></h5><br/>
+		<h5 id="author">by <%=@user.name%>  @<%=@user.user_name%></h5><br/>
 		</section>
 	</article>
 
@@ -17,8 +17,8 @@
 				<% @replies.each do |reply| %>
 					<li class="reply" ><p id="reply-time-added">  <%=reply.time_added.strftime("%Y-%m-%d %H:%M")%></p><br/> 
 						<p id="reply-message">  <%=reply.message%></p><br/>
-						<%= @user= User.first(:id => reply.user_id) %>
-						<h5 id="reply-author">by <%=@user.name.capitalize%>  @<%=@user.user_name%></h5><br/>
+							<% @user= User.first(:id => reply.user_id) %>
+						<h5 id="reply-author">by <%=@user.name%>  @<%=@user.user_name%></h5><br/>
 					</li>
 				<%end%>
 			<%end%>
