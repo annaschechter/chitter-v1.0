@@ -1,10 +1,12 @@
 Makers Academy Challenge week4
 
-This projects is for writting a little Twitter clone callet Chitter that will allow the users to post messages to a public stream.
+Chitter is a little Twitter clone that will allow the users to post messages to a public stream.
+You can see the working version of it here: https://annas-gossip-chitter.herokuapp.com/
 
-The Chitter will have the following functionality:
+The Chitter has the following functionality:
 
-* it will allow users to sign up for the service
-* it will allow users to log in and log out
-* it will allow users to post messages to chitter
-* it will allow users to see all peeps in chronological order
+* users can sign up for the service
+* users can og in and log out
+* users can post messages to chitter
+* users can see all posts in chronological order
+* users can reply to the posts

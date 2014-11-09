@@ -14,6 +14,15 @@
     	<a href="/users/new" class="button">Join</a>
 	</header>
 	<main>
+	
+		<% if flash[:errors] && !flash[:errors].empty? %>
+  		<ul id="errors">
+    		<% flash[:errors].each do |error| %>
+      	<li><%= error %></li>
+    		<% end %>
+  		</ul>
+		<% end %>
+
     	<% if current_user %>
     		<section id="signed-in-as">
 	    		<article id="user">Current User:
