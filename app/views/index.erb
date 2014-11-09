@@ -5,7 +5,7 @@
 				<% @user = User.first(:id => peep.user_id)%>
 				<li class="peep" ><p id="time-added">  <%=peep.time_added.strftime("%Y-%m-%d %H:%M")%></p><br/> 
 					<p id="message">  <%=peep.message%></p><br/>
-					<a id="see-replies" href="/replies/<%= peep.id %>">See Replies</a>
+					<a id="see-replies" href="/replies/<%= peep.id %>">See Replies(<%= peep.replies.count %>)</a>
 					<a id="reply" href="/replies/new/<%= peep.id %>" >Reply</a> 
 					<h5 id="author">
 						by <%=@user.name.capitalize%>  @<%=@user.user_name%><br/>
