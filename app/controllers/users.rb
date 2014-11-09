@@ -12,7 +12,7 @@ post '/users/new' do
 		redirect '/'	
   else
 		flash[:errors] = ["This username or email is already taken"]
-		erb :"users/new"
+		redirect '/users/new'
 	end 
 	
 end

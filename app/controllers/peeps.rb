@@ -4,7 +4,7 @@ get '/peeps/new' do
 		erb :"peeps/new"	
 	else 
 		flash[:errors] = ["You need to sign in to post on Chitter"]
-		erb :"peeps/new"
+		redirect '/sessions/new'
 	end
 end
 

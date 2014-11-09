@@ -8,7 +8,7 @@ get '/replies/new/:peep_id' do
 		erb :"replies/new"	
 	else 
 		flash[:errors] = ["You need to sign in to reply on Chitter"]
-		erb :"replies/new"
+		redirect '/sessions/new'
 	end
 end
 
@@ -22,7 +22,7 @@ post '/replies' do
 		redirect '/'
 	else 
 		flash[:errors] = ["Your reply cannot be empty"]
-		erb :"replies/new"
+		redirect '/'
 	end
 end
 
