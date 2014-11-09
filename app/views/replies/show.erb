@@ -17,6 +17,7 @@
 				<% @replies.each do |reply| %>
 					<li class="reply" ><p id="reply-time-added">  <%=reply.time_added.strftime("%Y-%m-%d %H:%M")%></p><br/> 
 						<p id="reply-message">  <%=reply.message%></p><br/>
+						<%= @user= User.first(:id => reply.user_id) %>
 						<h5 id="reply-author">by <%=@user.name.capitalize%>  @<%=@user.user_name%></h5><br/>
 					</li>
 				<%end%>
