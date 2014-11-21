@@ -13,6 +13,7 @@ Chitter has the following functionality:
 * users can see all posts in chronological order
 * users can reply to the posts
 
+<img src="http://i62.tinypic.com/30wnjbr.jpg"/>
 Languages and Tools
 -------------------
 * Ruby
@@ -20,6 +21,8 @@ Languages and Tools
 * PostgreSQL
 * RSpec
 * Capybara
+* HTML
+* CSS
 
 How to use
 ----------
@@ -34,8 +37,8 @@ $ bundle install
 Create test and development databases:
 ```
 $ psql
-# create database chitter-v1.0_test;
-# create database chitter-v1.0_development;
+# create database chitter_test;
+# create database chitter_development;
 ```
 Run RSpec to see the unit tests:
 ```

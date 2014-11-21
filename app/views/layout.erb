@@ -32,7 +32,7 @@
 	          		</form>
 		        </article>
 	          	<p class="field">
-		 			<br/>Name: <%= current_user.name.capitalize %></p>
+		 			<br/>Name: <%= (current_user.name).split(" ").each{|el| el.capitalize!}*' '%></p>
 		 			<br/><p class="field" >Username: <%= current_user.user_name %></p><br/>
 		    
 			</section>
