@@ -13,7 +13,7 @@ Chitter has the following functionality:
 * users can see all posts in chronological order
 * users can reply to the posts
 
-<img src="http://i62.tinypic.com/30wnjbr.jpg"/>
+<img src="https://s3-eu-west-1.amazonaws.com/annas-first-test-bucket/chitter.png"/>
 Languages and Tools
 -------------------
 * Ruby
